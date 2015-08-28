@@ -1,6 +1,6 @@
 <?php
 
-namespace vendor_name\project_name\drupal\drupal;
+namespace atphp\module\drupal\drupal;
 
 use Symfony\Component\EventDispatcher\GenericEvent;
 

@@ -1,14 +1,15 @@
 <?php
 
-namespace vendor_name\project_name\drupal;
+namespace atphp\module\drupal;
 
+use atphp\module\App;
+use atphp\module\drupal\controllers\DrupalController;
+use atphp\module\drupal\drupal\Drupal;
+use atsilex\module\Module;
+use atsilex\module\system\ModularApp;
 use Pimple\Container;
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
-use vendor_name\project_name\App;
-use vendor_name\project_name\drupal\controllers\DrupalController;
-use vendor_name\project_name\drupal\drupal\Drupal;
-use vendor_name\project_name\Module;
 
 /**
  * @TODO On bootstrap Drupal, register custom error handler, let Silex's logger handle/log errors.
@@ -17,13 +18,8 @@ use vendor_name\project_name\Module;
 class DrupalModule extends Module
 {
 
-    /** @var string */
     protected $machineName = 'drupal';
-
-    /** @var string */
-    protected $name = 'Drupal';
-
-    /** @var string */
+    protected $name        = 'Drupal';
     protected $description = 'Provide integration to Drupal.';
 
     /**
@@ -56,7 +52,7 @@ class DrupalModule extends Module
     /**
      * {@inheritdoc}
      *
-     * @param App $app
+     * @param ModularApp $app
      */
     public function connect(Application $app)
     {

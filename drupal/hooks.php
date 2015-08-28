@@ -2,7 +2,7 @@
 
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\EventDispatcher\GenericEvent;
-use vendor_name\project_name\drupal\drupal\Drupal;
+use atphp\module\drupal\drupal\Drupal;
 
 define('DRILEX_HOOK_IMPLEMENTATION', 'drilex_drupal,drilex_event,drilex_dispatcher,node_init,system_exit,system_boot,system_batch_alter,system_drupal_goto_alter,system_css_alter,system_ajax_render_alter,node_custom_theme,system_contextual_links_view_alter,user_cron,node_user_load,node_user_login,node_user_logout,system_watchdog');
 

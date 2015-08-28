@@ -1,13 +1,13 @@
 <?php
 
-namespace vendor_name\project_name\drupal\drupal;
+namespace atphp\module\drupal\drupal;
 
 use Doctrine\Common\Cache\Cache;
 use Symfony\Component\EventDispatcher\GenericEvent;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
-use vendor_name\project_name\drupal\drupal\api\DrupalApiTrait;
+use atphp\module\drupal\drupal\api\DrupalApiTrait;
 
 class Drupal
 {

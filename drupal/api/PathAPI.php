@@ -1,6 +1,6 @@
 <?php
 
-namespace vendor_name\project_name\drupal\drupal\api;
+namespace atphp\module\drupal\drupal\api;
 
 class PathAPI
 {

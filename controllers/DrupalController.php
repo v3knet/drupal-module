@@ -1,13 +1,14 @@
 <?php
 
-namespace vendor_name\project_name\drupal\controllers;
+namespace atphp\module\drupal\controllers;
 
-use Pimple\Container;
+use atphp\module\drupal\drupal\Drupal;
+use atsilex\module\system\controllers\BaseController;
+use atsilex\module\system\ModularApp;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use vendor_name\project_name\drupal\drupal\Drupal;
 
-class DrupalController
+class DrupalController extends BaseController
 {
 
     /** @var Drupal */
@@ -16,8 +17,10 @@ class DrupalController
     /** @var  string */
     private $template = '@drupal/pages/index.twig';
 
-    public function __construct(Container $c)
+    public function __construct(ModularApp $c)
     {
+        parent::__construct($c);
+
         $this->drupal = $c['drupal'];
 
         $preHeaders = headers_list();
